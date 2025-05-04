@@ -1,0 +1,60 @@
+Test Case ID,Test Scenario Description,Test Case Description,Pre-Conditions,Steps,Test Data,Expected Output,Actual Output,Status,Comments
+TC_KIPRUN_001,Product Details,"Verify product details (name, description, size options, price) are displayed correctly.","Open Decathlon website, navigate to the Kiprun product page.","1. Open the homepage.
+2. click on the Men
+3. click on the Tshirt and Tanks
+4. click on KIPRUN 100 Dry Men's Breathable Running T-Shirt - BLACK
+5. Verify product name, description, sizes, and price are displayed.",None,"Product name, description, sizes, and price should be displayed correctly.","Product name, description, sizes, and price displays correctly.", PASS,N/A
+TC_KIPRUN_002,Product Image,Verify product images load correctly and expand on click.,"Open Decathlon website, navigate to the Kiprun product page.","1. Open the homepage page.
+2. click on the Men
+3. click on the Tshirt and Tanks
+4. click on KIPRUN 100 Dry Men's Breathable Running T-Shirt - BLACK
+5. Verify product name, description, sizes, and price are displayed.",None,"Main product image should be visible.
+Clicking should expand the image.","Main product image is visible.
+Clicking should expand the image.", PASS,N/A
+TC_KIPRUN_003,Size Selection,Verify size selection functionality works correctly.,"Open Decathlon website, navigate to the Kiprun product page.","1. Open the product page.
+2. Select any size.
+3. Verify size is reflected correctly.",Size: M,Selected size should be reflected on the page.,Selected size is reflected on the page., PASS,N/A
+TC_KIPRUN_004,Add to Cart,Verify that the product can be added to the cart.,"Open Decathlon website, navigate to the Kiprun product page.","1. Select a size.
+2. Click ""Add to Cart"" button.
+3. Verify product is added to cart.",Size: M,Product should be successfully added to cart.,Product is successfully added to cart., PASS,N/A
+TC_KIPRUN_005,Check Price,Verify that the price is displayed correctly.,"Open Decathlon website, navigate to the Kiprun product page.","1. Open the product page.
+2. Verify the price is visible.",None,Price should be displayed correctly.,Price is displayed correctly., PASS,N/A
+TC_KIPRUN_006,Product Availability,Verify the availability message is displayed.,"Open Decathlon website, navigate to the Kiprun product page.","1. Open the product page.
+2. Verify product availability message is visible.",None,"""In Stock"" or ""Out of Stock"" message should be displayed.","""In Stock"" or ""Out of Stock"" message is displayed.", PASS,N/A
+TC_KIPRUN_007,Product Reviews,Verify that product reviews are displayed correctly.,"Open Decathlon website, navigate to the Kiprun product page.","1. Open the product page.
+2. Scroll to the reviews section.
+3. Verify reviews are displayed.",None,Product reviews and ratings should be displayed.,Product reviews and ratings is displayed., PASS,N/A
+TC_KIPRUN_008,Add to Wishlist,"Verify that the ""Add to Wishlist"" button works.","Open Decathlon website, navigate to the Kiprun product page.","1. Open the product page.
+2. Click ""Add to Wishlist"" button.
+3. Verify the product is added to wishlist.",None,Product should be added to wishlist successfully.,Product is added to wishlist successfully., PASS,N/A
+TC_KIPRUN_009,Product Comparison,"Verify the ""Compare"" button works.","Open Decathlon website, navigate to the Kiprun product page.","1. Open the product page.
+2. Click the ""Compare"" button.
+3. Verify product is added to comparison list.",None,Product should be added to comparison list.,To be filled after execution, Pending,N/A
+TC_KIPRUN_010,Check Shipping Information,Verify shipping information is visible.,"Open Decathlon website, navigate to the Kiprun product page.","1. Open the product page.
+2. Scroll to shipping info section.
+3. Verify shipping details.",None,Shipping information should be displayed correctly.,Shipping information is displayed correctly., PASS,N/A
+TC_KIPRUN_011,Price After Discount,Verify price reflects discount (if applicable).,"Open Decathlon website, navigate to the Kiprun product page.","1. Open the product page.
+2. Check if a discount is applied.
+3. Verify the updated price.",None,Price should be updated after any discount.,Price is updated after any discount., PASS,N/A
+TC_KIPRUN_012,Size Guide Availability,Verify that the size guide is available and works.,"Open Decathlon website, navigate to the Kiprun product page.","1. Open the product page.
+2. Click on ""Size Guide"" link.
+3. Verify size guide is displayed correctly.",None,Size guide should display correctly.,Size guide is display correctly., PASS,N/A
+TC_KIPRUN_013,Social Media Share,Verify social media sharing functionality.,"Open Decathlon website, navigate to the Kiprun product page.","1. Open the product page.
+2. Click on the social media share buttons.
+3. Verify the page is shared.",None,Product page should be shared correctly.,Product page is shared correctly., PASS,N/A
+TC_KIPRUN_014,Add to Cart with Multiple Sizes,Verify multiple sizes of the same product can be added to the cart.,"Open Decathlon website, navigate to the Kiprun product page.","1. Select a size (e.g., M) and add to cart.
+2. Select a different size (e.g., L) and add to cart.
+3. Verify both sizes are added to cart.","Sizes: M, L",Both sizes should be added to the cart successfully.,Both sizes is added to the cart successfully., PASS,N/A
+TC_KIPRUN_015,Navigation to Related Products,Verify that related products are displayed and clickable.,"Open Decathlon website, navigate to the Kiprun product page.","1. Open the product page.
+2. Scroll to the related products section.
+3. Click on a related product.
+4. Verify navigation to the correct product page.",None,Related product should navigate to the correct page.,Related product is navigate to the correct page., PASS,N/A
+TC_KIPRUN_016,Breadcrumb Navigation,Verify breadcrumb navigation works.,"Open Decathlon website, navigate to the Kiprun product page.","1. Open the product page.
+2. Click on breadcrumb links (Home > Men > Clothing > T-Shirts).
+3. Verify correct page navigation.",None,Breadcrumb navigation should be functional.,Breadcrumb navigation is working., PASS,N/A
+TC_KIPRUN_017,Product Availability in Store,Verify that store availability is displayed.,"Open Decathlon website, navigate to the Kiprun product page.","1. Open the product page.
+2. Check ""Find in Store"" for availability.
+3. Enter a location (e.g., pin code).
+4. Verify availability in nearby stores.",None,Product availability should be shown for nearby stores.,To be filled after execution, Pending,N/A
+ , , , , , , ,,,
+ , , , , , , ,,,

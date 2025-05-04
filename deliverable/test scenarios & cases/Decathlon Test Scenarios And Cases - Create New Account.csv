@@ -1,0 +1,88 @@
+Test Case ID,Test Scenario Description,Test Case description,Pre Conditions,Steps,Test Data,Expected Output ,Actual output,Status,Comments 
+TC_ST_001,Verify user is able to successfully create a new account with valid details,Verify that Sign-Up Page is loading,"1. User has a browser
+2. Internet connection is active
+3. User navigates to https://www.decathlon.in/","1. Open the website homepage
+2. Locate “Sign In” button
+3. Click the “Sign In” button
+4. Check if Sign-Up/Login page is displayed", , Sign-Up page should load successfully,Page is loading,PASS,
+TC_ST_002,Verify user is able to successfully create a new account with valid details,Verify the Mobile number field visible and accepts number,"1. The user has a browser
+2. Internet connection is active
+3. User navigates to
+url: https://www.decathlon.in/","1. Enter the URL in your browser from the pre-conditions
+2. Locate the ""Phone number"" text
+3. Click on the ""Phone number"" text
+4. Enter the number in the input field from the test data
+5. Verify the input field accepts the number",9867857834,The field should be visible and accept the numbers ,The field is visible and accepts the numbers,PASS,
+TC_ST_003,Verify user is able to successfully create a new account with valid details,Verify the next button is visible and clickable,"1. The user has a browser
+2. Internet connection is active
+3. User navigates to
+url: https://www.decathlon.in/","1. Enter the UR in your browser from the pre-conditions
+2. Locate the ""Phone number"" text
+3. Click on the ""Phone number"" text
+4. Enter the number in the input field from the test data
+5. Click on the ""next"" button
+6. Verify the ""additional information"" tab is open",9867857834,The button should be visible and enabled,The button is visible and clickable,PASS,
+TC_ST_004,Verify user is able to successfully create a new account with valid details,Verify that the email input field is visible and accepts valid email id,"1. The user has a browser
+2. Internet connection is active
+3. User navigates to
+url: https://www.decathlon.in/","1. Enter the URL in your browser from the pre-conditions
+2. Locate the ""E-mail"" text
+3. Click on the ""Email"" text
+4. Enter the valid email ID from the test data
+5. Verify the input field accepts the email ID","""sanjay@example.com""",The email input field should be visible and accepts valid email,The email input field is visible and accepts a valid email,PASS,
+TC_ST_005,Verify user is able to successfully create a new account with valid details,Verify the create account button enabled,"1. The user has a browser
+2. Internet connection is active
+3. User navigates to
+url: https://www.decathlon.in/","1. Enter the URL in your browser from the pre-conditions
+2. Enter valid mobile number and enter valid otp
+3. Enter valid email and enter valid otp
+4. Click on create account button",Enter abailable valid mobile number and email ,The create account button should enable,The create account button is enable,PASS,
+TC_ETE_006,Verify user is able to successfully create a new account with valid details,Create account using valid mobile and email,"1. The user has a browser
+2. Internet connection is active
+3. User navigates to
+url: https://www.decathlon.in/","1. Enter the URL in your browser from the pre-conditions
+2. Enter a valid mobile number
+3. Enter a valid OTP
+4. Enter a valid email
+5. Enter email OTP
+6. Check the T&C checkbox
+7. Click Create Account","mob. 8305174541
+email - sanjaypalaiya98@gmail.com",The account should be created and redirected to the homepage,The account is created and redirected to the homepage,PASS,
+TC_ETE_007,Verify user is able to successfully create a new account with valid details,Create an account using an invalid mobile(less than 10 number),"1. The user has a browser
+2. Internet connection is active
+3. User navigates to
+url: https://www.decathlon.in/","1. Enter the URL in your browser from the pre-condtions
+2. Enter an invalid mobile number from the test data
+3. Click on the ""next"" button
+4. Check error message is display",789067561,Verify that the error message should display,"Verify that the error message is like ""The number format does not match the selected country."" display",PASS,
+TC_ETE_008,Verify user is able to successfully create a new account with valid details,Create an account using an invalid mobile(less than 11 number),"1. The user has a browser
+2. Internet connection is active
+3. User navigates to
+url: https://www.decathlon.in/","1. Enter the URL in your browser from the pre-conditions
+2. Enter an invalid mobile number from the test data
+3. Click on the ""next"" button
+4. Check error message is displye",83051745412,Verify that the error message should display,"Verify that the error message is like ""The number format does not match the selected country."" display",PASS,
+TC_ETE_009,Verify user is able to successfully create a new account with valid details,Create an account using a duplicate mobile number,"1. The user has a browser
+2. Internet connection is active
+3. User navigates to
+url: https://www.decathlon.in/","1. Enter the URL in your browser from the pre-conditions
+2. Enter a mobile number from the test data
+3. Click on ""next"" button
+4. Verify the error message is display",8305174541,Verify that the error message should display,"Verify that the error message is like ""This account already exists"", display",PASS,
+TC_ETE_010,Verify user is able to successfully create a new account with valid details,Create account without entering mobile number,"1. User has a browser
+2. Internet connection is active
+3. User navigates to https://www.decathlon.in/","1. Open Sign Up page
+2. Leave Mobile number field blank
+3. Click ""Next"" button",(Blank mobile field),"Error message: ""Please enter your mobile number""",Error message displayed,PASS, 
+TC_ETE_011,Verify user is able to successfully create a new account with valid details,Enter invalid email format (without '@'),"1. User has a browser
+2. Mobile number entered and verified","1. Open Email field
+2. Enter invalid email like sanjay.com
+3. Submit form",sanjay.com,"Error message: ""Invalid email address""",Error message displayed,PASS, 
+TC_ETE_012,Verify user is able to successfully create a new account with valid details,Enter special characters in name field (if present),"1. User has a browser
+2. Mobile and email fields completed","1. Enter name as ""@@@@"" or ""1234""
+2. Submit form",@@@@,"Error message: ""Invalid name"" (if validation exists)",Error message displayed (if applicable),PASS, 
+TC_ETE_013,Verify user is able to successfully create a new account with valid details,Check OTP expiration behavior,"1. User has a browser
+2. OTP requested","1. Wait for OTP timeout (~5 mins)
+2. Try entering expired OTP",Expired OTP,"Error message: ""OTP expired, request new OTP""",Error message displayed,PASS, 
+TC_ETE_014,Verify user is able to successfully create a new account with valid details,Double click on Create Account button,"1. User fills all details
+2. Ready to click Create Account","1. Rapid double click on ""Create Account""",Valid data,Only one account should be created,Only one account created,PASS, 

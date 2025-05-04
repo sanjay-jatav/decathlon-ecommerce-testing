@@ -1,0 +1,104 @@
+Test Case ID,Test Scenario Description,Test Case Description,Pre-Conditions,Steps,Test Data,Expected Output,Actual Output,Status,Comments
+TC_SR_001,Product Search,Search for a valid product,Homepage is loaded,"1. Open homepage.
+2. Enter 'shoes' in search bar.
+3. Press Enter.",shoes,Related products should appear.,Related products appear.,PASS, 
+TC_SR_002,Invalid Product Search,Search for a non-existing product,Homepage is loaded,"1. Load the homepage
+2. type 'xyz123' in the search bar
+3. click the search button",xyz123,Should display 'No products found' message.,No products found' message is display,PASS, 
+TC_SR_003,Empty Search,Search without entering anything,Homepage is loaded,Click search icon without typing anything,(No input),Should either show all products or prompt to enter text.,Recent search showing,PASS, 
+TC_SR_004,Special Characters Search,Search using special characters,Homepage is loaded,"1. Open homepage.
+2. Enter '@#S%' in search bar.
+3. Press Enter.",@#$%,Should handle gracefully; no crash or error.,"""No product found"" message is display",FAIL, 
+TC_SR_005,Very Long Search String,Search using very long string (200+ characters),Homepage is loaded,"1. Open the homepage.
+
+2. Copy and paste a string of 200+ characters into the search bar.
+
+3. Press Enter or click the search button.
+
+4. Verify that the page does not crash or slow down due to the long input.",200+ characters,Should not crash or slow down page.,"""No product found"" message is display",PASS, 
+TC_SR_006,Case Sensitivity,Search using lowercase and uppercase letters,Homepage is loaded,"1. Load the homepage
+2. search for 'SHOES' (all caps)
+3. note the result
+4. then search for 'shoes' (lowercase)",SHOES,Results should be the same (search should be case-insensitive).," 'SHOES' = No products found;
+'shoes' = Products displayed",FAIL," Case sensitivity issue: Customers typing in uppercase may think the product doesn't exist, leading to poor user experience and loss of potential sales"
+TC_SR_007,Leading and Trailing Spaces,Search with extra spaces,Homepage is loaded,"1. Load the homepage.
+2. Enter 'shoes ' (with spaces) in the search bar.
+3. Click search.",shoes ',System should trim spaces and show correct results.,"""No product found"" message is display",FAIL," Customers may think the product isn't available due to spaces. This can cause them to leave the site, leading to lost sales and lower customer satisfaction."
+TC_SR_008,Search While Typing (Auto-suggest),Test search auto-suggestions,Homepage is loaded,"1. Open the homepage.
+
+2. Start typing ""shoes"" slowly in the search bar.
+
+3. Observe if auto-suggestions appear as you type.
+
+4. Verify that the suggestions appear.", shoes,Auto-suggestions should appear.,Auto-suggestions appears.,PASS, 
+TC_SR_009,Search in Slow Network,Perform search in slow internet,Homepage with Slow 3G network (DevTools),"1. Open the homepage.
+
+2. Set the network to Slow 3G using DevTools.
+
+3. Type ""Running Shoes"" in the search bar.
+
+4. Press search and observe results.
+
+5. Ensure that results appear without the page crashing or timing out.",Running Shoes,Should show results without page crash or timeout.,,PASS, 
+TC_FLT_001,Price Filter - Normal,Apply a valid price range filter,Product list page open,"1. Open the product list page.
+
+2. Apply the price filter between ₹199–₹3577.
+
+3. Verify that only products within the specified price range appear.",₹199–₹3577,Only products within range should display.,Products displays withing the range,PASS, 
+TC_FLT_002,Remove Price Filter,Clear an active price filter,Product list page open,"1. Open the product list page.
+
+2. Apply the price filter ₹1000–₹2000.
+
+3. Remove or clear the filter.
+
+4. Verify that all products are displayed again.",₹1000–₹2000,All products should display again,All products are displayed again,PASS, 
+TC_FLT_003,Filter by Gender (Positive),Apply Gender filter 'Men',Product list page loaded,"1. Open the product list page.
+
+2. Select the ""Men"" gender filter.
+
+3. Verify that only men's products are displayed.",Men,Products for Men should appear,Men’s products appear correctly,PASS, 
+TC_FLT_004,Filter by Category (Positive),Apply Category 'Shoes',Product list page loaded,"1. Open the product list page.
+
+2. Select the ""Shoes"" category.
+
+3. Verify that only shoes products are displayed.",Shoes,Only Shoes products should show,Shoes category products shown,PASS, 
+TC_FLT_005,Filter by Size (Positive),Apply Size filter 'M',Product list page loaded,"1. Open the product list page.
+
+2. Select the ""M"" size filter.
+
+3. Verify that medium size products are displayed.",M,Medium size products shown,Products for size M appear,PASS, 
+TC_FLT_006,Filter by Sport (Positive),Apply Sport filter 'Running',Product list page loaded,"1. Open the product list page.
+
+2. Select the ""Running"" sport filter.
+
+3. Verify that only running-related products are displayed.",Running,Running related products shown,Running products shown,PASS, 
+TC_FLT_007,Filter by Brand (Positive),Apply Brand 'NABAIJI',Product list page loaded,"1. Open the product list page.
+
+2. Select the ""NABAIJI"" brand filter.
+
+3. Verify that NABAIJI brand products are displayed.",NABAIJI,NABAIJI brand products shown,NABAIJI products displayed,PASS, 
+TC_FLT_008,Filter by Color (Positive),Apply Color 'Blue',Product list page loaded,"1. Open the product list page.
+
+2. Select the ""Blue"" color filter.
+
+3. Verify that only blue color products are displayed.",Blue,Only Blue products shown,Blue color products shown,PASS, 
+TC_FLT_009,Filter by Discount (Positive),Apply discount > 20%,Product list page loaded,"1. Open the product list page.
+
+2. Apply the discount filter for products with more than 20% off.
+
+3. Verify that products with a discount greater than 20% appear.",>20%,Products with 20%+ discount,Products with 20%+ discount shown,PASS, 
+TC_FLT_010,Filter by Rating (Positive),Apply 4 stars and above,Product list page loaded,"1. Open the product list page.
+
+2. Select the rating filter for 4 stars and above.
+
+3. Verify that only highly rated products appear.",4★,Highly rated products appear,4★ and above products shown,PASS, 
+TC_FLT_011,Apply More Filters (Positive),Apply 'Eco Design' filter,Product list page loaded,"1. Open the product list page.
+
+2. Select the ""Eco Design"" filter under More Filters.
+
+3. Verify that eco-friendly products are displayed.",Eco Design,Eco-friendly products shown,Eco Design products shown,PASS, 
+TC_FLT_012,Filter by Availability (Positive),Apply 'In stock' filter,Product list page loaded,"1. Open the product list page.
+
+2. Apply the ""In Stock"" filter.
+
+3. Verify that only products that are in stock are shown.",In Stock,Only available products shown,Only in-stock products shown,PASS, 

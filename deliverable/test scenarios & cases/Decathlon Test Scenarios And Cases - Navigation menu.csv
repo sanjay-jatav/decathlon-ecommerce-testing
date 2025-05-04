@@ -1,0 +1,64 @@
+Test Case ID,Test Scenario Description,Test Case Description,Pre-Conditions,Steps,Test Data,Expected Output,Actual Output,Status,Comment
+TC_NAV_001,Navigation links,"Verify navigation to Sports, Men, Women sections",Homepage is loaded successfully,"1. Open the browser and go to https://www.decathlon.in/
+
+2. Wait till the homepage loads completely.
+
+3. Hover your mouse on 'Sports', 'Men', 'Women' menu one by one.
+
+4. Click on any one option under those menus (for example, click ""Running"" under Sports).
+
+5. Check if you are going to the correct page related to what you clicked.","Sports, Men, Women",Should navigate to the correct respective category page,"Successfully navigated to correct category pages (Sports, Men, Women) after clicking.",PASS,
+TC_NAV_002,Navigation hover effect,Verify hover effect and dropdown visibility on menu items,Homepage loaded,"1. Open the Decathlon homepage.
+
+2. Move your mouse pointer slowly over the 'Men' and 'Women' menu.
+
+3. Look carefully if the dropdown list is appearing immediately and properly.
+
+4. Make sure there is no delay, no broken design.","Men, Women categories",Dropdown list should appear smoothly without delay,Hovering over 'Men' and 'Women' shows dropdown menu properly and quickly without delay.,PASS,
+TC_NAV_003 (Edge Case),Navigation link broken,Check behavior if a navigation link is broken (simulate 404),Homepage loaded (DevTools to simulate broken link),"1. Open the homepage normally.
+
+2. Right-click any navigation link (for example, ""Sports"") → Click ""Inspect"".
+
+3. In DevTools, change the link address (href) manually to some wrong URL (simulate broken link).
+
+4. Now click on that link.
+
+5. See if it shows a friendly error page like ""Page not found"" — not a server error (500).",N/A,"Should show a friendly error page, not a server error",No broken navigation links found during normal testing. (Need manual simulation for broken links using DevTools if required.),PASS,
+TC_NAV_004 (Edge Case),Navigation during page load,Verify clicking navigation link while homepage is still loading,Slow down network in DevTools,"1. Open Chrome DevTools → Go to Network tab → Set network to Slow 3G.
+
+2. Now open the Decathlon homepage (it will load slowly).
+
+3. Before page fully loads, quickly click on 'Sports' menu.
+
+4. See if you are still navigating properly to Sports page without crash.",Sports,Should still navigate to the correct page without crashing,Clicking 'Sports' during slow page load still navigates to Sports page correctly without any crash or glitch.,PASS,
+TC_NAV_005,Open navigation link in new tab,Verify right-click and 'Open in new tab' functionality,Homepage loaded," 1. Open a web browser (Chrome/Edge).
+2. Navigate to https: www.decathlon.in/.
+3. Wait until the homepage loads completely.
+4. Hover the mouse pointer over the 'Men' menu item.
+5. Right-click on the 'Men' menu link.
+6. From the context menu, select 'Open link in new tab' option.
+7. Switch to the new browser tab that opened.
+8. Verify that the correct 'Men' category page is displayed without any error.",Men,Page should open correctly in a new browser tab,Right-clicking 'Men' and opening in new tab works; category page opens successfully in a new tab.,PASS,
+TC_NAV_006 (Edge Case),Keyboard navigation,Verify that user can navigate using keyboard,Homepage loaded," 1. Open a web browser (Chrome/Edge).
+2. Navigate to https://www.decathlon.in/.
+3. Wait until the homepage loads completely.
+4. Press the Tab key multiple times until the focus is on the 'Women' menu item.
+5. Press the Enter key when the focus is on 'Women'.
+6. Verify that you are redirected directly to the 'Women' category page.
+7. No dropdown list should appear during keyboard navigation.", Women menu item, Pressing Enter on the focused 'Women' menu item should directly navigate to the 'Women' category page without showing any dropdown., Navigation successful to 'Women' category page via Tab and Enter keys without using mouse.,PASS,
+TC_NAV_007,Navigation link redirection timing,Verify the time it takes to navigate,Homepage loaded," 1. Open a web browser (Chrome/Edge).
+2. Navigate to https://www.decathlon.in/.
+3. Wait until the homepage fully loads.
+4. Open Chrome DevTools (Press F12) and go to the Network tab.
+5. Make sure the 'Disable cache' option is checked.
+6. Click on any category link such as 'Men', 'Women', or 'Sports'.
+7. Observe the page load time displayed in the Network tab.
+8. Record the Time To First Byte (TTFB) and Load time values.
+9. Verify that the complete page loading time is under 5 seconds.","Men, Women, Sports",Navigation should occur within acceptable loading time (<5 seconds),Navigation is quick (~2-3 seconds); pages load within acceptable time (<5 seconds).,PASS,
+TC_NAV_008,Incorrect navigation URL redirection,Verify if wrong redirection happens after clicking a link,Homepage loaded,"1. Open homepage.
+2. Hover and click on 'Sports'.
+3. Verify if redirected to the correct category page (Sports page) only, not to a wrong page.",Sports,"Clicking 'Sports' should open Sports category page, not any unrelated page.", ,PASS, 
+TC_NAV_009,Multiple rapid clicks on navigation link,Check behavior when user clicks navigation link multiple times quickly,Homepage loaded,"1. Open homepage.
+2. Rapidly click on 'Women' category 4-5 times.
+3. See if the page handles multiple requests properly (no crash, no error).",Women,Page should handle multiple clicks gracefully; no crash or unresponsive behavior., ,PASS, 
+ , , , , , , , , , 

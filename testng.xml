@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="CucumberTestSuite">
+	<listeners>
+        <listener class-name="extentreportlistener.ExtentReportBase" />
+    </listeners>
+    
+  <test name="Cucumber Tests" thread-count="5">
+    <classes>
+      <class name="testrunner.HomepageTestRunner"/> <!-- Cucumber Test Runner -->
+    </classes>
+  </test>
+</suite>

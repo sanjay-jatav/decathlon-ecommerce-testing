@@ -1,0 +1,38 @@
+Test Case ID,Test Scenario Description,Test Case Description,Pre-Conditions,Steps,Test Data,Expected Output,Actual Output,Status,Comments
+TC_LG_001,Login with valid credentials,Verify that user can login successfully with valid credentials,"1. Existing account
+2. Internet active
+3. Navigate to login URL","1. Open login page
+2. Enter valid mobile/email
+3. Enter OTP
+4. Click Login",Mobile: 8305174541,Redirected to homepage,As expected,PASS, 
+TC_LG_002,Login with invalid credentials,Verify error message with invalid credentials,"1. Existing account
+2. Internet active
+3. Navigate to login URL","1. Enter invalid mobile/email
+2. Submit",Mobile: 830517454,Show proper error message,As expected,PASS, 
+TC_LG_003,Login with empty fields,Check error for empty fields,"1. Existing account
+2. Internet active
+3. Navigate to login URL","1. Leave fields blank
+2. Click Login",Blank fields,"""Required"" message appears",As expected,PASS, 
+TC_LG_004,Login with unregistered mobile number,Try login with mobile not registered on site,"1. Existing account
+2. Internet active
+3. Navigate to login URL","1. Enter unregistered mobile
+2. Submit login form",9999999999, For Additional information please enter a valid email address should display,As expected,PASS, 
+TC_LG_005,Login with wrong OTP,Enter correct mobile but wrong OTP,"Mobile valid, OTP invalid","1. Enter correct mobile
+2. Enter wrong OTP
+3. Click Login",Wrong OTP like 123456,"Show ""Invalid OTP"" error",As expected,PASS, 
+TC_LG_006,Resend OTP functionality,Check if user can resend OTP if not received,"Mobile entered, waiting for OTP","1. Click ""Resend OTP""
+2. Enter received OTP","Valid mobile
+8305174541",New OTP sent successfully,As expected,PASS, 
+TC_LG_007,Login page responsiveness,Check login page UI on mobile resolution,Browser resized or mobile view,"1. Open login page
+2. View on 375x667 resolution",N/A,Page should adjust properly,As expected,PASS, 
+TC_LG_008,Multiple failed attempts,Attempt wrong logins multiple times,Multiple wrong attempts,"1. Enter available mobile number
+2. Enter wrong otp 
+3. Click on next button
+4. Do same thing more then 5 times",Wrong mobile or OTP,Lockout or captcha appears, captcha is not appears, FAIL," No captcha after multiple wrong logins means account can be hacked easily.
+It can impact all users who have registered on the website"
+TC_LG_009,Session expiration after login,Check if session expires after inactivity,Successfully logged in,"1. Login
+2. Stay idle for long time
+3. Try to navigate",Valid login,Session timeout message appears, invalid otp is display, FAIL,"Expected session timeout message was not displayed. Instead, an ""Invalid OTP"" message appeared. This may indicate incorrect session handling after inactivity. Needs review."
+TC_LG_010,Browser back button after login,Verify that back button doesn’t show login page after logging in,Login done successfully,"1. Login
+2. Click browser back button",Valid login,"Should stay on homepage, not back to login",User goes back to Sign In page after pressing back button, FAIL,"User is redirected to login page after pressing back button post-login. This affects user experience and may lead to confusion or drop-offs. Possible issue with session or cache handling.
+"

@@ -1,0 +1,22 @@
+Project Name,Decathlon,,
+Client,Masai,,
+Creation By,Sanjay Jatav,,
+Creation Date,23-April-2025,,
+Approval By,Pooja Yadav,,
+Approval Data,-,,
+Browser Name,Chrome,,
+Browser Version,134.0.6998.90,,
+Operating System,Window,,
+,,,
+Test Scenario ID,Test Scenario Description,Priority,Number of Test Cases
+TS_001,Verify user is able to successfully create a new account with valid details,P0,14
+TS_002,Verify login functionality with valid and invalid credentials,P0,10
+TS_003,Verif homepage banners are visible and loaded without error,P0,5
+TS_004,"Verify navigation menu links redirect to the correct category pages(e.g., Sports, Men, Women)",P0,14
+TS_005,"Verify product search and filters work correctly for price, brand, and category",P0,12
+TS_006,"Verify product details page displays correct images, specifications, and reviews",P0,17
+TS_007,Verify user can add items to the cart and complete the checkout process successfully,P0, Pending
+TS_008,Verify contact us form accepts valid inputs and displays success/error messages,P0, Pending
+TS_009,"Verify footer links (About Us, Privacy Policy, etc.) navigate to correct pages",P1, Pending
+ ,Total Test Cases,,72
+ ,,,

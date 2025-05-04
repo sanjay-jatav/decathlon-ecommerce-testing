@@ -1,0 +1,13 @@
+Test Case ID,Test Scenario Description,Test Case Description,Pre-Conditions,Steps,Test Data,Expected Output,Actual Output,Status,Comment
+TC_HP_001,Homepage banners loading,Verify that homepage banners load correctly on page load,Open the site in a supported browser,"1. Launch browser
+2. Go to https://www.decathlon.in/
+3. Observe homepage banner section",N/A,All banners should load with clear images and no broken links,All banners is load with clear images and no broken links,PASS,
+TC_HP_002,Banner redirection,Verify clicking a banner redirects to the correct product/category page,Homepage is loaded,"1. Click on any main banner
+2. Wait for the redirection",N/A,User should land on the relevant category or product page,User is land on the relevant category or product page,PASS,
+TC_HP_003,Banner carousel navigation,Verify that users can navigate between banners,Homepage is loaded,"1. Click the next/previous arrows on the banner section
+2. Observe the change",N/A,Next/Previous banner should be displayed accordingly,Next/Previous banner is display accordingly,PASS,
+TC_HP_004,Slow internet banner loading,Verify banner behavior on slow network,"Throttle network to ""Slow 3G"" using DevTools","1. Open Decathlon website
+2. Observe banner section load behavior",N/A,Banners should load gracefully or show loader; should not break the layout,Banners load gracefully or show a loader; they do not break the layout,PASS,
+TC_HP_005,Banner click while it’s sliding,Check behavior when banner is clicked mid-slide,Homepage is loaded,"1. Wait for auto-slide
+2. Click during transition",N/A,Should still redirect to correct page or gracefully handle click,Banners is still redirect to correct page,PASS,
+ , , , , , , ,,,
