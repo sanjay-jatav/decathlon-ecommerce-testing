@@ -19,7 +19,7 @@ public class Hooks {
     @After
     public void tearDown() {
         // Quit WebDriver
-        DriverManager.quitDriver();
+        DriverManager.getDriver();
 
         // Flush ExtentReports
         ExtentManager.flushReports();

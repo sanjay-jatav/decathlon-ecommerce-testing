@@ -1,6 +1,6 @@
 Feature: Decathlon Login Page
 
-  @login
+  @loginWithMobileNumber
   Scenario Outline: Login using Mobile Number and OTP
     Given User is on the Decathlon login page
     When User selects login with Mobile and OTP
@@ -12,7 +12,7 @@ Feature: Decathlon Login Page
       | mobile     |
       | 8305174541 |
 
-  @login
+  @loginWithEmail
   Scenario Outline: Login using Email and OTP
     Given User is on the Decathlon login page
     When User selects login with Email and OTP
