@@ -1,4 +1,4 @@
-
+![Homepage Screenshot](image/decathlon.png)
 # 🛒 Decathlon E-commerce Testing | End-to-End QA Automation Project
 
 This repository showcases a complete Quality Assurance (QA) project for the [Decathlon India E-commerce website](https://www.decathlon.in).
