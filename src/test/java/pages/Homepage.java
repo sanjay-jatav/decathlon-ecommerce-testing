@@ -12,7 +12,7 @@ public class Homepage {
     WebDriver driver;
     private Actions actions;
 
-    // 🔒 Private locators
+    
     private By searchBar = By.cssSelector("button[data-testid='search-button']");
     private By searchInput = By.cssSelector("input[data-testid='search-input']");
     private By navMenuButton = By.xpath("//button[@aria-label='mega-menu']");
@@ -21,28 +21,28 @@ public class Homepage {
     private By banner = By.xpath("//div[@class='swiper-wrapper']");
     
 
-    // 👨‍🔧 Constructor
+    
     public Homepage(WebDriver driver) {
         this.driver = driver;
         this.actions = new Actions(driver);
     }
 
-    // 🔍 Search using ENTER key
+    
     public void searchUsingEnterKey(String query) {
         driver.findElement(searchBar).sendKeys(query + Keys.ENTER);
     }
 
-    // 🖱️ Navigation menu button
+    
     public void clickNavMenuButton() {
         driver.findElement(navMenuButton).click();
     }
 
-    // 📋 Top-level navigation menu items
+    
     public List<WebElement> getNavMenuItems() {
         return driver.findElements(navMenuItems);
     }
 
-    // 📂 Subcategories
+    
     public List<WebElement> getSubCategories() {
         return driver.findElements(subCategories);
     }
@@ -56,7 +56,7 @@ public class Homepage {
         }
     }
 
-    // 📸 Banner interactions
+    
     public boolean isBannerDisplayed() {
         return driver.findElement(banner).isDisplayed();
     }
@@ -69,7 +69,7 @@ public class Homepage {
         return driver.findElement(banner).getAttribute("innerHTML");
     }
 
-    // ✅ Page title
+    
     public String getPageTitle() {
         return driver.getTitle();
     }
